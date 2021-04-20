@@ -1,0 +1,1394 @@
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <math.h>
+#include <sys/mman.h>
+#include "C:/altera/13.1/embedded/ip/altera/hps/altera_hps/hwlib/include/hwlib.h"
+#include "C:/altera/13.1/embedded/ip/altera/hps/altera_hps/hwlib/include/socal/socal.h"
+#include "C:/altera/13.1/embedded/ip/altera/hps/altera_hps/hwlib/include/socal/hps.h"
+#include "C:/altera/13.1/embedded/ip/altera/hps/altera_hps/hwlib/include/socal/alt_gpio.h"
+
+#include <inttypes.h>
+#include "hps_0.h"
+
+/*
+uint8_t state = 0;
+void 	*virtual_base;
+int 	fd;
+*/
+
+
+//chmod +x appl
+//./appl
+
+
+#define HW_REGS_BASE ( ALT_STM_OFST )
+#define HW_REGS_SPAN ( 0x04000000 )
+#define HW_REGS_MASK ( HW_REGS_SPAN - 1 )
+
+
+#define 	N_fish_calibrate	5
+
+#define 	N_fish_max   		10
+#define 	Del_x  				12
+
+//начальные значения рыбки
+uint32_t 	fish_area_max = 10400; //49467; //22757; //10400;
+uint32_t 	fish_len_max = 407; //416; //266;
+uint32_t 	fish_vel_max = 117; //125; //117;
+
+uint32_t  fish_area_max_2 = 0;
+
+//средние параметры рыбки
+uint32_t 	fish_area_mean_cnt = 0;
+uint32_t 	fish_area_mean = 900; //15747; //13393; //800;
+uint32_t 	fish_len_mean_cnt = 0;
+uint16_t 	fish_len_mean = 363; //368; //250;
+uint32_t 	fish_vel_mean_cnt = 0;
+uint16_t 	fish_vel_mean = 42; //51;
+uint32_t 	fish_life_mean_cnt = 0;
+uint8_t 	fish_life_mean = 22;
+
+//максимальные параметры рыбы
+float 	K_len_max = 1.06;
+float 	K_area_max = 1.08;
+float 	K_area_n3 = 1.96;
+float 	K_string_len_max = 1.06;
+
+
+
+#define 	x0		0
+#define 	y0		1
+#define 	xn		2
+#define 	yn		3
+
+
+volatile	uint8_t state = 0;
+void 	*virtual_base;
+int 	fd;
+
+volatile uint32_t 	*box_req;
+volatile uint32_t 	*req_res;
+volatile uint32_t 	*box_n_addr;
+volatile uint32_t 	*n_pix_addr;
+volatile uint32_t	*led;
+volatile uint32_t 	*addr_out;
+volatile uint32_t 	*box_addr;
+volatile uint32_t 	*box_x0_addr;
+volatile uint32_t 	*box_xn_addr;
+volatile uint32_t 	*box_y0_addr;
+volatile uint32_t 	*box_yn_addr;
+volatile uint32_t 	*x_min_addr;
+volatile uint32_t 	*x_max_addr;
+volatile uint32_t 	*n_frame_addr;
+
+uint8_t  box_cnt = 0;
+
+
+//параметры цепочки рыбы
+uint8_t 	fish_string_flag = 0;
+uint32_t 	fish_string_area = 0;
+uint16_t 	fish_string_life = 0;
+uint8_t 	fish_string_box_life = 0;
+uint16_t 	fish_string_fish_vel = 0;
+
+uint16_t 	fish_string_fish_x0 = 0;
+uint16_t 	fish_string_fish_xn = 0;
+uint16_t 	fish_string_x0 = 0;
+uint16_t 	fish_string_y0 = 0;
+uint16_t 	fish_string_xn = 0;
+uint16_t 	fish_string_yn = 0;
+
+
+uint32_t 	fish_string_time = 0;
+
+uint8_t 	f_life = 0;
+uint16_t 	f_vel = 0;
+uint16_t 	f_x0 = 0;
+uint16_t 	f_xn = 0;
+
+
+uint16_t 	f_len = 0;
+uint16_t 	t_len = 0;
+uint16_t 	fish_first_cnt = 0;
+
+
+//расчет прохождения рыбок
+uint16_t 	t_fish = 0;
+uint16_t 	t_string = 0;
+float		st_len_1 = 0;
+uint16_t 	fish_string_cnt = 0;
+
+uint16_t 	box_len = 0;
+
+
+//параметры одной рыбки
+uint8_t 	fish_flag[N_fish_max];
+uint8_t 	fish_mark_n[N_fish_max];
+uint8_t 	fish_mark_n_z[N_fish_max];
+uint32_t 	fish_box_area[N_fish_max];
+uint16_t	fish_x0[N_fish_max];
+uint16_t 	fish_y0[N_fish_max];
+uint16_t 	fish_xn[N_fish_max];
+uint16_t 	fish_yn[N_fish_max];
+
+uint32_t	fish_time[N_fish_max];
+uint8_t 	fish_life[N_fish_max];
+uint16_t	fish_vel[N_fish_max];
+uint8_t 	fish_vel_cnt[N_fish_max];
+
+uint32_t 	fish_area[N_fish_max];
+uint16_t 	fish_len[N_fish_max];
+uint8_t 	fish_len_cnt[N_fish_max];
+
+//переменные
+uint16_t 	fish_cnt = 0;
+uint16_t 	fish_cnt_z = 0;
+uint16_t 	fish_cnt_d = 0;
+
+uint16_t 	box_cnt_z = 0;
+
+
+uint32_t	fish_area_m = 0;
+uint16_t	fish_len_m = 0;
+uint16_t	fish_v_m = 0;
+
+uint8_t 	time_wait = 1;
+
+uint8_t 	m_fish_x0 = 0;
+uint8_t 	mark_n_old = 0;
+
+uint8_t 	cross_x = 0;
+uint8_t 	cross_y = 0;
+uint8_t 	cross_x_2 = 0;
+uint8_t 	cross_x_3 = 0;
+uint8_t 	cross_box = 0;
+
+int32_t		vel_1;
+int32_t		vel_2;
+
+uint16_t 	len = 0;
+
+float	dx = 0;
+float	dy = 0;
+float	fish_div = 0;
+
+uint16_t	vel = 0;
+float		div_x = 0;
+
+float		fish_area_dob =  0;
+float		fish_len_dob =  0;
+float		fish_v_dob = 0;
+
+uint8_t 	fish_cnt_en = 0;
+
+int16_t 	box_n_new = 0;
+uint8_t 	mark_n_new = 0;
+uint8_t 	fish_n_min = 0;
+uint8_t 	new_fish = 0;
+
+
+uint32_t		time_cnt = 0;
+uint32_t		time_cnt_z = 0;
+
+
+//входные данные
+uint8_t  	ram_addr = 0;
+uint16_t 	box[N_fish_max][4];
+uint32_t 	box_area[N_fish_max];
+
+uint8_t 	box_flag[N_fish_max];
+uint8_t 	box_flag_z[N_fish_max];
+uint8_t 	fish_cross[N_fish_max];
+uint8_t 	fish_cross_z[N_fish_max];
+uint8_t 	fish_link[N_fish_max];
+uint8_t 	box_cross[N_fish_max];
+uint8_t 	box_cross_z[N_fish_max];
+
+uint16_t 	N_fish = 0;
+uint16_t 	N_fish_z = 0;
+
+uint16_t  	x0_min = 0;
+uint16_t  	xn_max = 0;
+uint16_t  	x_mean = 0;
+
+uint16_t  	box_lef_x0 = 0;
+uint16_t  	box_lef_xn = 0;
+
+uint8_t  	fish_cross_en = 0;
+uint8_t  	fish_string_end = 0;
+
+//переменные цикла
+uint8_t i = 0;
+uint8_t m = 0;
+uint8_t n = 0;
+uint8_t f = 0;
+
+
+int main() {
+
+	printf("Hello DE1_SOC!\r\n");
+
+	//очищаем память
+	memset(fish_flag, 0, sizeof(fish_flag));
+	memset(fish_mark_n, 0, sizeof(fish_mark_n));
+	memset(fish_mark_n_z, 0, sizeof(fish_mark_n_z));
+	memset(fish_box_area, 0, sizeof(fish_box_area));
+
+	memset(fish_x0, 0, sizeof(fish_x0));
+	memset(fish_y0, 0, sizeof(fish_y0));
+	memset(fish_xn, 0, sizeof(fish_xn));
+	memset(fish_yn, 0, sizeof(fish_yn));
+
+	memset(fish_time, 0, sizeof(fish_time));
+	memset(fish_life, 0, sizeof(fish_life));
+	memset(fish_vel, 0, sizeof(fish_vel));
+	memset(fish_vel_cnt, 0, sizeof(fish_vel_cnt));
+
+	memset(fish_area, 0, sizeof(fish_area));
+	memset(fish_len, 0, sizeof(fish_len));
+	memset(fish_len_cnt, 0, sizeof(fish_len_cnt));
+
+	memset(box, 0, sizeof(box));
+	memset(box_area, 0, sizeof(box_area));
+	memset(box_flag, 0, sizeof(fish_len_cnt));
+	memset(fish_cross, 0, sizeof(fish_cross));
+	memset(fish_link, 0, sizeof(fish_link));
+
+	//инициализация
+	if( ( fd = open( "/dev/mem", ( O_RDWR | O_SYNC ) ) ) == -1 ) {
+		printf( "ERROR: could not open \"/dev/mem\"...\n" );
+		return( 1 );
+	}
+	virtual_base = mmap( NULL, HW_REGS_SPAN, ( PROT_READ | PROT_WRITE ), MAP_SHARED, fd, HW_REGS_BASE );
+	if( virtual_base == MAP_FAILED ) {
+		printf( "ERROR: mmap() failed...\n" );
+		close( fd );
+		return( 1 );
+	}
+
+	//запоминаем адрес
+	box_req = virtual_base +
+			( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_REQ_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+
+	req_res = virtual_base +
+			( ( unsigned long  )( ALT_LWFPGASLVS_OFST + REQ_RES_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+/*	led = virtual_base +
+			( ( unsigned long  )( ALT_LWFPGASLVS_OFST + PIO_LED_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+*/	n_pix_addr = virtual_base +
+			( ( unsigned long  )( ALT_LWFPGASLVS_OFST + N_PIX_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+
+	addr_out = virtual_base +
+			( ( unsigned long  )( ALT_LWFPGASLVS_OFST + ADDR_OUT_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	box_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_ADDR_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	box_n_addr = virtual_base +
+			( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_N_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	box_x0_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_X0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	box_xn_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_XN_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	box_y0_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_Y0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	box_yn_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + BOX_YN_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+
+	x_min_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + X_MIN_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	x_max_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + X_MAX_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+
+	n_frame_addr = virtual_base +
+				( ( unsigned long  )( ALT_LWFPGASLVS_OFST + N_FRAME_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+
+	//приведствие
+	state = 0;
+
+uint16_t	x_mean1 = 0;
+uint16_t	x_mean2 = 0;
+//uint16_t	x_mean3 = 0;
+uint16_t	a = 1;
+
+	x0_min = *(x_min_addr);
+	xn_max = *(x_max_addr);
+	x_mean = ( x0_min + (xn_max - x0_min)*0.65);
+
+
+	printf("x0_min = %d\r\n", x0_min);
+	printf("xn_max = %d\r\n", xn_max);
+	printf("x_mean = %d\r\n", x_mean);
+
+
+x_mean1 = (a * 1.9);
+x_mean2 = ceil(1.9);
+//x_mean3 = fix(a * 1.7);
+
+	printf("x_mean1 = %d\r\n", x_mean1);
+	printf("x_mean2 = %d\r\n", x_mean2);
+//	printf("x_mean3 = %d\r\n", x_mean3);
+
+	//главный цикл
+	while( 1 ) {
+		//вывод в сигналтаб
+//		*(led) = state;
+
+		//printf("while 1 \r\n");
+		//printf("state = %d\r\n", state);
+
+		switch (state) {
+
+			case 0 : {
+				//printf("state_0 \r\n");
+
+				//сброс значений
+				for(i=1; i < N_fish_max; i++)
+				{
+					box[i][x0] = 0;
+					box[i][y0] = 0;
+					box[i][xn] = 0;
+					box[i][yn] = 0;
+					box_area[i] = 0;
+					box_flag_z[i] = box_flag[i];
+					box_flag[i] = 0;
+					fish_cross_z[i] = fish_cross[i];
+					fish_cross[i] = 0;
+					fish_link[i] = 0;
+					box_cross_z[i] = box_cross[i];
+					box_cross[i] = 0;
+				}
+
+
+				*(req_res) = 0;
+				*(addr_out) = 0;
+				state = 1;
+				break;
+			}
+
+			//ожидание начала кадра
+			case 1 : {
+
+				//printf("state_1 \r\n");
+				if (*(box_req + 3) == 1 )
+				{
+					//сбрасываем флаг
+					*(box_req + 3) = 0;
+					box_cnt = *(box_n_addr);
+					//printf("box_cnt = %d\r\n", box_cnt);
+
+					//time_cnt_z = time_cnt;
+					time_cnt = time_cnt + 1;;
+					time_cnt_z = *(n_frame_addr);
+
+					printf("%d\t", (time_cnt ));
+
+					if (box_cnt > 0)
+					{
+						ram_addr = 0; //1
+						*(addr_out) = ram_addr; //записываем новый адрес
+						state = 2;
+					}
+					else {
+						state = 3;
+					}
+				}
+				break;
+			}
+			//читаем входные данные
+			case 2 : {
+
+				//printf("state_2 \r\n");
+				//ждем нужный адрес
+				if (*(box_addr) == ram_addr)
+				{
+					box[(ram_addr+1)][x0] = *(box_x0_addr);
+					box[(ram_addr+1)][y0] = *(box_y0_addr);
+					box[(ram_addr+1)][xn] = *(box_xn_addr);
+					box[(ram_addr+1)][yn] = *(box_yn_addr);
+					box_area[(ram_addr+1)] = *(n_pix_addr);
+					box_flag[(ram_addr+1)] = 1;
+
+					if (((ram_addr + 1) < box_cnt)&&
+						((ram_addr + 1) < N_fish_max))
+					{
+						//читаем данные
+						ram_addr = ram_addr + 1;
+						*(addr_out) = ram_addr; //записываем новый адрес
+					}
+					else {
+						//переход следующий шаг
+						state = 4; //state = 3;
+					}
+				}
+				break;
+			}
+			case 3 : {
+
+				//printf("state_3 \r\n");
+				//обнуляем старые значения
+				for(i=(box_cnt + 1); i < N_fish_max; i++)
+				{
+					box[i][x0] = 0;
+					box[i][y0] = 0;
+					box[i][xn] = 0;
+					box[i][yn] = 0;
+					box_area[i] = 0;
+					box_flag[i] = 0;
+				}
+				state = 4;
+				break;
+			}
+			case 4 : {
+
+				//printf("state_4 \r\n");
+				//вывод на экран
+				//printf("box_cnt =  %d\t", box_cnt);
+				//for(i=0; i<N_fish_max; i++)
+				for(i=1; i <= box_cnt; i++)
+				{
+					//printf("n = %d\t", i);
+					//printf("box_x0 = %d\t", box[i][x0]);
+					//printf("box_y0 = %d\r\n", box[i][y0]);
+					//printf("box_xn = %d\t", box[i][xn]);
+					//printf("box_yn = %d\r\n", box[i][yn]);
+					//printf("box_area = %d\t", box_area[i]);
+					//printf("box_flag = %d\r\n", box_flag[i]);
+				}
+
+				//printf("box_area = %d\r\n", box_area[0]);
+				state = 5;
+				break;
+			}
+
+			case 5 : {
+				//основная часть программы
+				//выполняется один раз после прихода кадра
+
+				//printf("start_0\r\n");
+
+				if(fish_cnt == N_fish_calibrate)
+				{
+					if(fish_len_mean >=  320)
+					{
+						K_len_max = 1.2;
+						K_area_max = 1.2;
+						K_area_n3 = 3;
+					}
+					else {
+						K_len_max = 1.06;
+						K_area_max = 1.08;
+						K_area_n3 = 1.96;
+					}
+				}
+
+				//поиск самого левого объекта
+				for (m = 1; m <= box_cnt; m++)
+				{
+					if((box[m][x0] == x0_min)&&(box_lef_xn < box[m][xn]))
+					{
+						box_lef_x0 = x0_min;
+						box_lef_xn = box[m][xn];
+					}
+				}
+
+				//анализ цепочки рыб
+				fish_cross_en = 0;
+				fish_string_end = 0;
+
+				//условие цепочки рыбы
+				if ((box[1][x0] == x0_min)&&(box[1][xn] == xn_max)&&(box_cnt == 1))
+				{
+					//printf("start_1\r\n");
+
+					//была ли цепочка до этого
+					if(fish_string_flag == 0)
+					{
+						fish_string_flag = 1;
+
+						//сохраняем параметры объекта о максимальном времени жизни
+						f_life = 1;
+						f_vel = 0;
+						f_x0 = 0;
+						f_xn = 0;
+
+						for(m = 0; m < N_fish_max; m++)
+						{
+							if ((fish_flag[m] == 1)&&
+							(fish_x0[m] <= (xn_max - fish_vel_mean))&&
+							(fish_life[m] > f_life))
+							{
+								f_life = fish_life[m];
+								f_vel = (uint16_t) (((float)fish_vel[m])/ ((float)fish_vel_cnt[m]));
+								f_x0 = fish_x0[m];
+								f_xn = fish_xn[m];
+							}
+						} //for m = 1 : 1 : N_fish_max
+
+						fish_string_box_life = f_life;
+						fish_string_fish_vel = f_vel;
+						fish_string_fish_x0 = f_x0;
+						fish_string_fish_xn = f_xn;
+						fish_string_life = 0;
+
+					} //if(fish_string_flag == 0)
+
+					//обновление параметров объекта
+					box_flag[1] = 0;  // сбрасываем box
+					fish_string_x0 = box[1][x0];
+					fish_string_y0 = box[1][y0];
+					fish_string_xn = box[1][xn];
+					fish_string_yn = box[1][yn];
+					fish_string_area =  (uint32_t)(box_area[1]);
+					fish_string_box_life =fish_string_box_life + 1;
+					fish_string_life = fish_string_life + 1;
+					fish_string_time = time_cnt;
+
+
+				} //условие цепочки рыбы
+				else
+				{
+					if(fish_string_flag == 1) //если цепочка закончилась
+					{
+						//printf("start_2\r\n");
+						//удаление объекта
+						fish_string_flag = 0;
+
+						if(fish_string_life <= time_wait) //если цепочка была короткое время
+						{
+							fish_cross_en = 1; //можно увеличить время на time_wait
+							fish_string_end = 1;
+						}
+						else
+						{//если цепочка была длинное время
+
+							//условие прохождения первого объекта
+							if(((fish_string_fish_xn - fish_string_fish_x0) >
+								(uint16_t)((float)(fish_len_max)*K_string_len_max))&&
+								(fish_string_fish_x0 == x0_min))
+							{
+								//если несколько рыбок в цепочке берем средний размер рыбы
+								f_len = fish_len_mean;
+							}
+							else	{
+								f_len = xn_max - fish_string_fish_x0;
+								//f_len = xn_max - fish_string_fish_x0 - fish_string_fish_vel;
+								//тут вычитание скорости рыбы
+							}
+
+							t_len  = (fish_string_life + 1)*fish_string_fish_vel +
+									(uint16_t)((float)fish_len_mean*0.05);
+							//t_len  = (fish_string_life + 2)*fish_string_fish_vel;
+
+							if(f_len <= t_len)
+								fish_first_cnt = 1;
+							else
+								fish_first_cnt = 0;
+
+							//расчет рыбы в длинной цепочке
+							t_fish = (uint16_t)(((float)(f_len) / (float)(fish_string_fish_vel))); //fix!!!
+
+							if(fish_string_life >= t_fish)
+								t_string = fish_string_life - t_fish + 1;
+							else
+								t_string = 0;;
+
+							//st_len_0 = ((float)(t_string)*(float)(fish_string_fish_vel) )/((float)(fish_len_mean)*0.93);
+							st_len_1 = ((float)(t_string)*(float)(fish_vel_mean) )/((float)(fish_len_mean)*0.93);
+							fish_string_cnt = (uint16_t)st_len_1; //fix!!!
+
+							//увеличение счетчика рыбы
+							fish_cnt = fish_cnt + fish_first_cnt + fish_string_cnt;
+
+							//записываем средние параметры для счетчиков
+							fish_area_mean_cnt = fish_area_mean_cnt + (uint32_t)(((uint16_t)fish_area_mean)*(fish_first_cnt + fish_string_cnt));
+							fish_life_mean_cnt = fish_life_mean_cnt + (uint32_t)(((uint16_t)fish_life_mean)*(fish_first_cnt + fish_string_cnt));
+							fish_len_mean_cnt = fish_len_mean_cnt + (uint32_t)((fish_len_mean)*(fish_first_cnt + fish_string_cnt));
+							fish_vel_mean_cnt = fish_vel_mean_cnt + (uint32_t)((fish_vel_mean)*(fish_first_cnt + fish_string_cnt));
+
+							//создание новых объектов
+							if(box_cnt > 0)
+							{
+								N_fish = N_fish + box_cnt;
+
+								for(m = 1; m <= box_cnt; m++)
+								{
+									if((xn_max - box[m][x0]) > fish_vel_mean*1.5) // проверить правильно ли умножает!
+									{
+										for(n = 1; n < N_fish_max; n++)
+										{
+											if (fish_flag[n] == 0) //ищем свободное место
+											{
+												box_flag[m] = 0;
+												//проверка длины
+												box_len = box[m][xn] - box[m][x0];
+
+												if((((float)box_len) > ((float)fish_len_max)*K_string_len_max)&&(box[m][xn] == xn_max))
+												{
+													//две рыбки
+													fish_cnt = fish_cnt + 1;
+													fish_area_mean_cnt = fish_area_mean_cnt + (uint32_t)(fish_area_mean);
+
+
+													fish_life_mean_cnt = fish_life_mean_cnt + (uint32_t)(fish_life_mean);
+													fish_len_mean_cnt = fish_len_mean_cnt + (uint32_t)(fish_len_mean);
+													fish_vel_mean_cnt = fish_vel_mean_cnt + (uint32_t)(fish_vel_mean);
+												}
+
+												if(box[m][x0] > (xn_max - fish_vel_mean*4)) //если рядом с правой границей
+													fish_life[n] = fish_life_mean;
+												else{
+
+													if((box[m][x0] > x0_min)||(box[m][3] > (x0_min + xn_max)/2))
+														fish_life[n] = fish_life_mean/2;
+													else
+														fish_life[n] = 1;
+												}
+
+												fish_x0[n] = box[m][x0];
+												fish_y0[n] = box[m][y0];
+												fish_xn[n] = box[m][xn];
+												fish_yn[n] = box[m][yn];
+												fish_box_area[n] =  box_area[m];
+												fish_mark_n[n] = 1;
+												fish_mark_n_z[n] =  1;
+												fish_area[n] = fish_area_mean;
+												fish_len[n]  =  fish_len_mean;
+												fish_len_cnt[n] =  1;
+												fish_vel[n]  =  fish_vel_mean;
+												fish_vel_cnt[n] =  1;
+
+												fish_flag[n] = 1;
+												fish_time[n] = time_cnt;
+												break;
+
+											} //if (fish_flag[n] == 0) //ищем свободное место
+										} //(n = 0; n < N_fish_max; n++)
+									} //if((xn_max - box[m][1]) > fish_vel_mean*1.5)
+								} //for(m = 0; m < box_cnt; m++)
+							} //if(box_cnt > 0) //создание новых объектов
+
+
+						} //else if(fish_string_life <= time_wait) //если цепочка была длинное время
+
+						//удаление данных объекта
+						fish_string_x0 = 0;
+						fish_string_y0 = 0;
+						fish_string_xn = 0;
+						fish_string_yn = 0;
+						fish_string_area = 0;
+						fish_string_fish_vel = 0;
+						fish_string_fish_x0 = 0;
+						fish_string_fish_xn = 0;
+						fish_string_box_life = 0;
+						fish_string_life = 0;
+
+					} //else if(fish_string_flag == 1)  если цепочка закончилась
+					else {
+
+						//если нет и небыло цепочки рыбы %else if (fish_string == 1)
+						//printf("start_3\r\n");
+						fish_cross_en = 1;
+					}
+				} //else //if ((box(1,1) == x0_min)&&(box(1,3) == xn_max)&&(box_cnt == 1))
+
+
+
+// 				***анализ пересечений***
+				if(fish_cross_en == 1)
+				{
+
+					//printf("start_4\r\n");
+					for (m = 1; m < N_fish_max; m++)
+					{
+						// активный объект и не только что созданный
+						if ((fish_flag[m] == 1)&&(fish_time[m] != time_cnt))
+						{
+
+							// сравниваем с box
+				// 			time
+				// 			box_cnt
+							for (n = 1; n <= box_cnt; n++)
+							{
+
+								//соединение рыбок 2->1
+								cross_x = 0;
+								cross_y = 0;
+								if (( box[n][x0] < fish_x0[m] )&&
+								(fish_x0[m] <  box[n][xn])&&
+								((fish_xn[m] - box[n][x0])  > fish_len_mean*0.8))
+								{
+									cross_x = 1;
+								}
+								if ( (box[n][yn] >=  fish_y0[m])&&(box[n][y0] <=  fish_yn[m]))
+								{
+									cross_y = 1;
+								}
+								if((cross_x && cross_y)&&
+								(box[n][x0] == x0_min))
+								{
+									fish_link[m] = n;
+								} //соединение рыбок 2->1
+
+
+								if(box_flag[n] == 1)
+								{
+									// пересечение областей
+									cross_box = 0;
+									cross_x = 0;
+									cross_y = 0;
+									cross_x_2 = 0;
+									cross_x_3 = 0;
+									// проверка по пересечений по х
+									//если в кадре 2-ва объекта, то ограничение на
+									//скорость перемещения
+									vel_1 = (int32_t)( box[n][x0] -  fish_x0[m] );
+									vel_2 = (int32_t)( box[n][xn] -  fish_xn[m] );
+									if(((fish_xn[m] - fish_x0[m]) > fish_len_max*K_len_max)&&
+									((box[n][xn] - box[n][x0]) < fish_len_max*K_len_max))
+									{
+										//две рыбки вместе разъединились
+										vel_2 = (int32_t)(fish_vel_mean);
+									}
+									if(fish_string_end == 1)
+									{
+										//тк смещение было в течении 2х
+										//кадров
+										vel_1 = vel_1 / 2;
+										vel_2 = vel_2 / 2;
+									}
+
+				// 					n
+				//					vel_1
+				// 					vel_2
+									if(((box[n][x0] + Del_x) >= fish_x0[m])  &&
+									(box[n][x0] <= fish_xn[m]) &&
+									(box[n][xn] >= fish_xn[m]) &&
+									(((vel_1 <= fish_vel_max*1.20)&&
+									(vel_2 <= fish_vel_max*K_len_max))|| //проверить пермножение !!!
+									(box_cnt <= 1)) )
+									{
+										cross_x = 1;
+									}
+									if((box[n][x0] >= fish_x0[m] ) &&
+									(box[n][x0] <= fish_xn[m]) &&
+									((box[n][xn] + Del_x) >= fish_xn[m]) &&
+									(((vel_1 <= fish_vel_max*1.20)&&
+									(vel_2 <= fish_vel_max*K_len_max))||
+									(box_cnt <= 1)) )
+									{
+										cross_x = 1;
+									}
+
+									//объект вытянут по вертикали
+									dx =   (float)(fish_xn[m] - fish_x0[m]);
+									dy =   (float)(fish_yn[m] - fish_y0[m]);
+									fish_div = dy/dx;
+									//если перелет по х
+									// 	((fish_div > 3)&&(box(n,1) <= (fish_box_xn(m) + Del_x*1.6))))&&...
+									if( (box[n][x0] >= fish_x0[m] ) &&
+									((fish_div > 1.85)&&(box[n][x0] <= (fish_xn[m] + Del_x*0.5)))&&
+									(box[n][xn] >= fish_xn[m]) &&
+									(((vel_1 <= fish_vel_max*1.20)&&
+									(vel_2 <= fish_vel_max*K_len_max))||
+									(box_cnt <= 1)) )
+									{
+										cross_x = 1;
+									}
+
+									//если одна из границ сильно сдвинулась назад
+									if((( fish_xn[m] - box[n][xn]) >= Del_x)||(( fish_x0[m] - box[n][x0]) >= Del_x))
+										div_x = (float)(box[n][xn] - box[n][x0]) /(float)(fish_xn[m] - fish_x0[m]);
+									{	//правая граница
+										if ((box[n][x0] >= (fish_x0[m] + Del_x)) &&
+										(box[n][x0] <= fish_xn[m]) &&
+										(div_x >= 0.74) )
+										{
+											cross_x = 1;
+										}
+										//левая граница
+						// 				if ( (div_x < 1.15) &&...
+						// 				(box(n,3) >= (fish_box_xn(m) + Del_x))&&
+						// 				(vel_1 <= fish_vel_max*K_fish_max) )
+						// 					cross_x = 1;
+						// 				end
+									}
+
+
+									// проверка по у
+									if((box[n][yn] >= fish_y0[m]) && (box[n][y0] <= fish_yn[m]))
+									{
+										cross_y = 1;
+									}
+
+									//разсоединение рыбок 1->2
+									if((fish_x0[m]  <  box[n][x0])&&
+									(((fish_xn[m] < box[n][xn])&&(fish_xn[m] - box[n][x0]) > fish_len_mean*0.4)||
+									((fish_xn[m] > box[n][xn])&&((box[n][x0] - fish_x0[m]) >  fish_len_mean*0))))
+									{
+										cross_x_2 = 1;
+									}
+									if ((fish_x0[m]  <  box[n][x0])&&
+									(fish_xn[m] < box[n][xn])&&((fish_xn[m] + 2) > box[n][x0]))
+									{
+										cross_x_3 = 1;
+									}
+
+									if((cross_x || cross_x_2)&&(cross_y)&&
+									(fish_x0[m] == x0_min)&&
+									(box[n][x0] > x0_min))
+									{
+										cross_box = 1;
+									}
+
+									//метка не увеличивается x!=x0_min
+									//для v_03 340fr
+									if((cross_x_3)&&(cross_y)&&
+									(fish_cnt_d == 0)&&
+									(box_cnt_z == 1)&&
+									(box_cnt == 2)&&
+									(fish_x0[m] > x0_min)&&
+									(fish_mark_n[m] == 1)&&
+									(fish_x0[m] < (x0_min + fish_vel_mean*0.4))&&
+									(box[n][x0] < (x0_min + fish_vel_mean*2.6)))
+									{
+										cross_box = 1;
+									}
+
+									// v_02 270fr
+									if((cross_x_3)&&(cross_y)&&
+									(fish_cnt_d == 0)&&
+									(box_cnt_z == 1)&&
+									(box_cnt == 2)&&
+									(fish_x0[m] >= x0_min)&&
+									(fish_mark_n[m] <= 2)&&
+									(box[n][x0] < (x0_min + fish_vel_mean*2.75)))
+									{
+										cross_box = 1;
+									}
+
+				// 					n
+				//  				fish_cnt_d
+				//  				box_cnt_z
+				// 					cross_box
+
+									if(cross_box == 1)
+									{
+										box_cross[n] = m;
+										mark_n_old = fish_mark_n[m];
+										m_fish_x0 = (uint8_t)m;
+									} //разсоединение рыбок 1->2
+
+				// 					cross_x
+				// 					cross_x_2
+				// 					cross_y
+				// 					step=1
+
+									// если пересекаются сохраняем номер
+									if (cross_x && cross_y)
+									{
+				//						if ~((fish_x0(m) == x0_min)&&(box_cnt > 1))
+				//							box_flag(n) = 0;  % сбрасываем box
+				// 							fish_cross(m) = n;
+				// 							break %для данного объекта пересечение найдено
+				// 						else % а пересекается ли он с другими?
+											if(fish_cross[m] == 0)
+											{
+												box_flag[n] = 0;
+												fish_cross[m] = n;
+				// 								if(box(n,1) > x0_min)
+				// 									break %для данного объекта пересечение найдено
+				// 								end
+											}
+											else
+											{	if((box[fish_cross[m]][x0] < box[n][x0])&&(box[fish_cross[m]][x0] == x0_min))
+												{
+													//если объект правее
+													box_flag[fish_cross[m]] = 1;
+													box_flag[n] = 1;
+													fish_cross[m] = n;
+					// 								break //для данного объекта пересечение найдено
+												}
+											}
+				// 						end % ~((fish_box_x0(m) == x0_min)&&(box_cnt > 1))
+									} //if (cross_x && cross_y)
+
+								} //(box_flag(n) == 1)
+							} //for (n = 0; n < box_cnt; n++)
+						} //if ((fish_flag[m] == 1)&&(fish_time[m] ~= time))
+					} //for (m = 0; m < N_fish_max; m++)
+				} //if(fish_cross_en == 1)
+
+//***вычисление параметров для пересекающихся объектов***
+				if(fish_cross_en == 1)
+				{
+					//printf("start_5\r\n");
+
+					for(m = 1; m < N_fish_max; m++)
+					{
+						//для пересекающихся объектов
+						if(fish_cross[m] > 0)
+						{
+							n = fish_cross[m];
+							box_flag[n] = 0;  // сбрасываем box
+
+							//если еще не правай край вычисляем скорость
+							if ( (box[n][xn] < xn_max)&&(fish_xn[m] < box[n][xn]) )
+							{
+								vel = (uint16_t)( box[n][xn] -  fish_xn[m] ) ;
+								fish_vel[m] =  fish_vel[m] + (uint16_t)(vel);
+								fish_vel_cnt[m] =  fish_vel_cnt[m] + 1;
+								//запоминаем максимальную скорость
+								if ((vel > fish_vel_max)&&
+								(vel < fish_vel_max*1.6)&&
+								(vel < 200))
+								{
+									fish_vel_max = vel;
+								}
+							}
+
+							fish_x0[m] = box[n][x0];
+							fish_y0[m] = box[n][y0];
+							fish_xn[m] = box[n][xn];
+							fish_yn[m] = box[n][yn];
+							fish_box_area[m] =  box_area[n];
+							fish_life[m] = fish_life[m] + 1;
+							fish_time[m] = time_cnt;
+
+							//если большие размеры
+							//объекта значит там несколько рыбок
+							fish_mark_n_z[m] = fish_mark_n[m];
+				//			m_fish_x0
+							if(fish_cnt >= N_fish_calibrate)
+							{
+
+								if((( (box[n][xn] - box[n][x0]) > fish_len_max*K_len_max )||
+								(box_area[n] > fish_area_max*K_area_max ))&&
+								((box[n][x0] <= (x0_min + fish_vel_max*0.15))||
+								(m_fish_x0 == m)))
+								{
+									fish_mark_n[m] = 2;
+								}
+
+								//сделать другой порог 3->2
+								if((box_area[n] > fish_area_max*K_area_n3)&&
+								((box[n][x0] <= (x0_min + fish_vel_max*0.15))||
+								(m_fish_x0 == m)))
+								{
+									fish_mark_n[m] = 3;
+								}
+
+								if(((box[n][xn] - box[n][x0]) < fish_len_max*1.02)&&
+								(box_area[n] < fish_area_max*1.3)&&
+								(((box[n][x0] < (x0_min + fish_vel_max*0.8))&&
+								(box[n][x0] < ( box_lef_xn + fish_vel_max*0.2))&&
+								(box[n][x0] > x0_min))||
+								(m_fish_x0 == m)))
+								{
+									//считает каждый раз box(n,1)== x0_min
+									fish_mark_n[m] = 1;
+								}
+							} //if(fish_cnt >= N_fish_calibrate)
+
+					//		x = box(n,3) - box(n,1)
+					// 		s =box_area(n)
+
+							//если не соприкасаемся с краями вычисляем
+							//длину и площадь объекта и размеры
+							//не больше максимальных
+							if (((x0_min < box[n][x0])&&(box[n][xn] < xn_max))&&
+							(~(( (box[n][xn] - box[n][x0]) > fish_len_max*K_len_max )||
+							(box_area[n] > fish_area_max*1.08 ))||
+							(fish_cnt < N_fish_calibrate)))
+							{
+								 fish_area[m] = fish_area[m] + (uint32_t)(box_area[n]);
+								 len = (uint16_t)(box[n][xn] - box[n][x0]);
+								 fish_len[m]  =  fish_len[m] + len;
+								 fish_len_cnt[m] =  fish_len_cnt[m] + 1;
+								 //запоминаем максимальную площадь
+								if (box_area[n] > fish_area_max)
+								{
+									fish_area_max =  box_area[n];
+
+									fish_area_max_2 =  (box[n][xn] - box[n][x0])*(box[n][yn] - box[n][y0]);
+									//printf("s %d\t", fish_area_max_2);
+
+									/*printf("x = %d\r\n", box[n][x0]);
+									printf("x = %d\r\n", box[n][xn]);
+									printf("y = %d\r\n", box[n][y0]);
+									printf("y = %d\r\n", box[n][yn]);*/
+
+								}
+								 //запоминаем максимальную длину
+								if (len > fish_len_max)
+								{
+									//может следует запоминать
+									//если один объект в кадре
+									fish_len_max =  len;
+
+								}
+							} //if ((x0_min < box(n,1))&&(box(n,3) < xn_max))
+
+						} //if(fish_cross[m] > 0)
+					} //for(m = 0; m < N_fish_max; m++)
+				} //if(fish_cross_en == 1)
+
+
+//				***анализ не обновившихся объктов по time***
+
+				for(m = 1; m < N_fish_max; m++)
+				{
+					// активный объект и не только что созданный
+					if ( ((fish_string_flag == 0)&&(fish_flag[m] == 1)&&(fish_time[m] != time_cnt))||
+						((fish_string_flag == 1)&&(fish_flag[m] == 1)&&((fish_time[m] + (uint32_t)(time_wait)) < time_cnt)) )
+					{
+						//удаление объекта тк не было пересечений
+						//проверка: xo-правее середины, xn=правая  граница, life > 5
+						//кадров, размер рыбки близок среднему
+						fish_area_dob =   (float)( fish_area[m])/ (float)( fish_len_cnt[m]);
+						fish_len_dob =  (float)( fish_len[m])/ (float)(fish_len_cnt[m]);
+						fish_v_dob = (float)( fish_vel[m])/ (float)(fish_vel_cnt[m]);
+
+						//проверка слияния рыбок
+						fish_cnt_en = 1;
+						if(fish_link[m] > 0)
+						{
+				 			//fish_link(m)
+							//поиск номера объекта
+							for(f = 0; f < N_fish_max; f++)
+							{
+								if(fish_link[m] == fish_cross[f])
+								{
+									break;
+								}
+							}
+
+							if( (fish_mark_n[f] > fish_mark_n_z[f])&&
+							  ( ~((fish_xn[m] == xn_max)&&
+							  ((fish_xn[m] - fish_x0[m]) < fish_len_mean*0.5))) )
+							{
+								fish_cnt_en = 0;
+							}
+
+						} // if(fish_link(m) > 0)
+/*
+						printf("fish_x0[m] = %d\r\n", fish_x0[m]);
+						printf("fish_cnt_en = %d\r\n", fish_cnt_en);
+						printf("fish_vel_mean = %d\r\n", fish_vel_mean);
+*/
+
+
+						if  (((fish_string_flag == 0)&&
+							((fish_x0[m] > (x0_min + fish_vel_mean*0.4 ))&&
+							(fish_cnt_en == 1)))||
+							(((fish_string_flag == 1)&&(fish_x0[m] > (xn_max - fish_vel_mean)))&&
+							(fish_xn[m] == xn_max)))
+						{
+
+							//считаем что рыбка прошла
+							fish_cnt = fish_cnt + (uint16_t)(fish_mark_n[m]);
+							if(fish_mark_n[m] > 1)
+							{
+								//printf("fish_mark_n[m]= %d\t", fish_mark_n[m]);
+								//printf("m= %d\t", m);
+
+							}
+
+
+							//сохраняем параметры рыбки
+							if(fish_mark_n[m] == 1)
+							{
+								fish_area_mean_cnt = fish_area_mean_cnt + (uint32_t)(fish_area_dob);
+								fish_len_mean_cnt = fish_len_mean_cnt + (uint32_t)(fish_len_dob);
+								fish_vel_mean_cnt = fish_vel_mean_cnt + (uint32_t)(fish_v_dob);
+								fish_life_mean_cnt = fish_life_mean_cnt + (uint32_t)(fish_life[m]);
+							}
+							else {
+								//если рыбок несколько записываем средние
+								//значение
+								fish_area_mean_cnt = fish_area_mean_cnt + (uint32_t)fish_area_mean*(uint32_t)fish_mark_n[m];
+								fish_len_mean_cnt = fish_len_mean_cnt + (uint32_t)fish_len_mean*(uint32_t)fish_mark_n[m];
+								fish_vel_mean_cnt = fish_vel_mean_cnt + (uint32_t)fish_v_dob*(uint32_t)fish_mark_n[m];
+								fish_life_mean_cnt = fish_life_mean_cnt + (uint32_t)fish_life_mean*(uint32_t)fish_mark_n[m];
+							}
+						} //if  (((fish_string_flag == 0)&&...
+
+						//сбрасываем объект
+						fish_flag [m] = 0;
+						N_fish = N_fish - 1;
+
+						fish_x0[m] = 0;
+						fish_y0[m] = 0;
+						fish_xn[m] = 0;
+						fish_yn[m] = 0;
+						fish_box_area[m] =  0;
+						fish_mark_n[m] =  0;
+						fish_mark_n_z[m] = 0;
+						fish_vel[m] = 0;
+						fish_vel_cnt[m] =  0;
+						fish_area[m] = 0;
+						fish_len[m]  = 0;
+						fish_len_cnt[m] =  0;
+						fish_life[m] = 0;
+
+					} // if ( ((fish_string_flag == 0)&&(fish_flag(m) == 1)&&(fish_time(m) != time
+				} //for (m = 0; m < N_fish_max; m++)
+
+
+//				***создание нового объекта***
+				//разсоединение рыбок 1->2
+				//считаем количество новых пересекающихся box
+				//сейчас
+				box_n_new = 0;
+				mark_n_new = 0;
+				fish_n_min = 0;
+				new_fish = 0;
+
+				//разсоединение рыбок 1->2
+				if(m_fish_x0 > 0)
+				{
+
+
+					for(m = 1; m <= box_cnt; m++)  // чему равен box_cnt = ~числу входных box m = 1:1: box_cnt
+					{
+						if((box_flag[m] == 1)&&(box_cross[m] == m_fish_x0))
+						{
+							box_n_new = box_n_new + 1;
+						}
+					}
+
+					//минимальное количество рыбок
+					if(fish_flag[m_fish_x0] == 1)
+					{
+						fish_n_min = box_n_new + 1;
+					}
+					else {
+						fish_n_min = box_n_new;
+					}
+
+					//проверяем размеры объекта
+					if(fish_flag[m_fish_x0] == 1)
+					{
+						m = m_fish_x0;
+						n = fish_cross[m];
+						mark_n_new = fish_mark_n[m];
+				// 		box_n_new
+				// 		mark_n_old
+				// 		mark_n_new
+				// 		fish_mark_n_z(m)
+				// 		fish_n_min
+				//
+				// 		(fish_cnt_d == 0)&&...
+				// 		(box_cnt_z == 1)&&...
+				// 		(box_cnt == 2)&&...
+				// 		(fish_x0(m) > x0_min)&&...
+				// 		(fish_mark_n(m) == 1)&&...
+
+				// 		% для v_02 270fr
+				// 		if((N_fish == 1)&&(box_cnt == 2)&&...
+				// 		(box_n_new == 0)&&...
+				// 		((mark_n_old > mark_n_new)||...
+				// 		((mark_n_old == 1)&&(mark_n_new == 1))))
+				//  			new_fish = 1;
+				// 		end
+					}  // if(fish_flag(m_fish_x0) == 1)
+
+				} // if(m_fish_x0 > 0)
+
+				//***создание нового объекта***
+				for(m = 1; m <= box_cnt; m++) //m = 1:1: box_cnt
+				{
+					if(box_flag[m] == 1) // нашли новый объект box	(box_flag(m) == 1)
+					{
+						if(N_fish < N_fish_max) //проверяем что есть место
+						{
+							for(n = 1; n < N_fish_max; n++) //n = 1:1: N_fish_max
+							{
+								if(fish_flag[n] == 0) //находим свободное место для записи
+								{	//создаем новый объект
+									if (((box[m][x0] == x0_min)&&(box[m][xn] < x_mean))||
+									  ((box_cross[m] > 0)&&(m_fish_x0 > 0))||
+									  ((new_fish == 1)&&(box[m][x0] < (fish_xn[m_fish_x0] + 2))))
+									{
+
+/*										if(((new_fish == 1)&&(box[m][x0] < (fish_xn[m_fish_x0] + 2)))&&
+										(!((box_cross[m] > 0)&&(m_fish_x0 > 0)))&&
+										(!((box[m][x0] == x0_min)&&(box[m][xn] < x_mean))))
+										{
+											new_fish;
+										}
+*/
+
+										box_flag[m] = 0;  // сбрасываем box
+										// m - новой пришедший box
+										// n - новой объект куда
+										// пишем
+										fish_x0[n] = box[m][x0];
+										fish_y0[n] = box[m][y0];
+										fish_xn[n] = box[m][xn];
+										fish_yn[n] = box[m][yn];
+										fish_box_area[n] =  box_area[m];
+										fish_mark_n[n] = 1;
+
+										//если большие размеры
+										//объекта значит там несколько рыбок
+										if((( (box[n][xn] - box[n][x0]) > fish_len_max*K_len_max )||
+										(box_area[n] > fish_area_max*K_area_max ))&&
+										(box[n][x0] <= (x0_min + fish_vel_max*0.15))&&
+										(fish_cnt >= N_fish_calibrate))
+										{
+											fish_mark_n[n] = 2;
+										}
+										//сделать другой порог 3->2
+										if((box_area[n] > fish_area_max*K_area_n3 )&&
+										(box[n][x0] <= (x0_min + fish_vel_max*0.15))&&
+										(fish_cnt >= N_fish_calibrate))
+										{
+											fish_mark_n[n] = 3;
+										}
+										//проверка количества рыбок
+										if ((box_cross[m] > 0)&&(m_fish_x0 > 0))
+										{
+											box_n_new = box_n_new - 1;
+											mark_n_new = mark_n_new + fish_mark_n[n];
+
+											if((box_n_new == 0)&&(mark_n_new < fish_n_min))//box_n_new-может быть меньше нуля
+											{
+												fish_mark_n[n] = fish_n_min - mark_n_new;
+											}
+										}
+
+
+										fish_mark_n_z[n] =  fish_mark_n[n];
+										N_fish = N_fish + 1;
+										fish_flag[n] = 1;
+										fish_time[n] = time_cnt;
+										fish_life[n] = 1;
+									}
+									//записали и выходим на след элемент
+									break;
+
+								} //(fish_flag(n) == 0)
+							} //for m = 1:1: box_cnt
+						} //(N_fish < N_fish_max)
+					} //if (box_flag == 1) % нашли новый объект	box
+				} //for m = 1:1: box_cnt
+
+
+// 				***запоминаем значения***
+				fish_cnt_d = (uint16_t)(fish_cnt - fish_cnt_z);
+				fish_cnt_z = fish_cnt;
+				box_cnt_z = box_cnt;
+
+				if(fish_cnt >= 1)
+				{
+					fish_life_mean = (uint8_t)( (float)(fish_life_mean_cnt) /(float)(fish_cnt) );
+					fish_area_mean = (uint32_t)((float)(fish_area_mean_cnt) /(float)(fish_cnt) );
+					fish_len_mean = (uint16_t)((float)(fish_len_mean_cnt) /(float)(fish_cnt) );
+					fish_vel_mean = (uint16_t)((float)(fish_vel_mean_cnt ) /(float)(fish_cnt) );
+				}
+
+
+				//fish_area_max = 10400;
+				//fish_len_max = 266;
+				//fish_vel_max = 117;
+
+				//printf("box_cnt = %d\r\n", box_cnt);
+				//printf("N_fish = %d\r\n", N_fish);
+				//printf("fish_cnt = %d\r\n", fish_cnt);
+
+
+				printf("cnt= %d\t", fish_cnt);
+				printf("%d\t", N_fish);
+				printf("%d\t", box_cnt);
+
+				printf("%d\t", fish_area_max);
+				printf("%d\t", fish_len_max);
+				printf("%d\t", fish_vel_max);
+
+				printf("%d\t", fish_area_mean);
+				printf("%d\t", fish_len_mean);
+				printf("%d\t", fish_vel_mean);
+/*
+
+				for(i=1; i <= box_cnt; i++)
+					{
+						//printf("n = %d\t", i);
+						//printf("box_x0 = %d\t", box[i][x0]);
+						//printf("box_y0 = %d\r\n", box[i][y0]);
+						//printf("box_xn = %d\t", box[i][xn]);
+						//printf("box_yn = %d\r\n", box[i][yn]);
+						printf("S %d\t", box_area[i]);
+						//printf("box_flag = %d\r\n", box_flag[i]);
+					}
+*/
+
+				printf("\r\n");
+
+
+/*
+				fish_string_x0;
+				ish_string_y0;
+				fish_string_xn;
+				fish_string_yn;
+				fish_string_area;
+
+				fish_string_flag;
+				fish_string_life;
+				fish_string_box_life;
+				fish_string_fish_vel;
+				fish_string_fish_x0;
+				fish_string_fish_xn;
+
+				(fish_area_max);
+				(fish_len_max);
+				(fish_vel_max);
+*/
+
+/*
+				for(m = 0; m < N_fish_max; m++)
+				{
+					//fish_cnt;
+					//N_fish;
+
+					fish_x0[m];
+					fish_y0[m];
+					fish_xn[m];
+					fish_yn[m];
+					fish_box_area[m];
+					(fish_flag[m]);
+					(fish_life[m]);
+				 	(float)(fish_area[m])/(float)(fish_len_cnt[m]);
+				 	(float)(fish_len[m])/(float)(fish_len_cnt[m]);
+					(fish_len_cnt[m]);
+					(float)(fish_vel[m])/(float)(fish_vel_cnt[m]);
+
+					(fish_vel_cnt[m]);
+					fish_mark_n[m];
+
+					fish_cross[m];
+					box_cross[m];
+				}
+				*/
+
+				state = 0;
+				break;
+			}
+
+			default :
+				state = 0;
+				break;
+		}
+
+	}
+
+	// clean up our memory mapping and exit
+	if( munmap( virtual_base, HW_REGS_SPAN ) != 0 ) {
+		printf( "ERROR: munmap() failed...\n" );
+		close( fd );
+		return( 1 );
+	}
+
+	close( fd );
+
+	return( 0 );
+}

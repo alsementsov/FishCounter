@@ -1,0 +1,8 @@
+#Fri Mar 13 11:23:21 MSK 2015
+config_db_path0_defaultid=com.arm.ds\:0
+config_db_path1_enabled=true
+enabled_config_db_path=C%3A\\altera\\13.1\\embedded\\ds-5\\sw\\debugger\\configdb;C%3A\\altera\\13.1\\embedded\\ds-5\\sw\\eclipse\\dropins\\plugins\\com.arm.debug.configdatabase.data.community_5.15.0.20130620_145638;
+config_db_path0_enabled=true
+config_db_path1_defaultid=com.arm.ds\:1
+eclipse.preferences.version=1
+config_db_path=C%3A\\altera\\13.1\\embedded\\ds-5\\sw\\debugger\\configdb;C%3A\\altera\\13.1\\embedded\\ds-5\\sw\\eclipse\\dropins\\plugins\\com.arm.debug.configdatabase.data.community_5.15.0.20130620_145638;

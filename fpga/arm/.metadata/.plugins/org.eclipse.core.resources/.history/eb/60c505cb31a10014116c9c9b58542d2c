@@ -1,0 +1,4 @@
+
+#!/bin/bash
+. /home/root/run_appl.sh
+exit 0

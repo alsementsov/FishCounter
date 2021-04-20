@@ -1,0 +1,9 @@
+
+**** Build of configuration Default for project Altera-SoCFPGA-HelloWorld-Linux-GNU ****
+
+make all 
+arm-linux-gnueabihf-gcc -g -O0 -Werror -Wall -c hello.c -o hello.o
+arm-linux-gnueabihf-gcc -g -O0 -Werror -Wall hello.o -o hello 
+arm-linux-gnueabihf-nm hello > hello.map
+
+**** Build Finished ****

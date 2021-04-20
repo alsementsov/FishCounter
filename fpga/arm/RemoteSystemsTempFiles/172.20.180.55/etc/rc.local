@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#chmod +x /home/root/run_appl.sh
+. /home/root/run_appl.sh
+exit 0

@@ -1,0 +1,11 @@
+
+
+D:/Chirik/DE1_SoC/Project/1_my_lib/TP_RAM.v
+
+Apr 03 09AM:53:56>: Megafunction RAM: 3-PORT is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+D:/Chirik/DE1_SoC/Project/1_my_lib/TP_RAM.v
+
+Apr 03 09AM:53:58>: Megafunction RAM: 3-PORT is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

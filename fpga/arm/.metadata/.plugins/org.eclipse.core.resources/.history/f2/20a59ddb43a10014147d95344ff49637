@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Run application"
+echo "Run application" > me2.c
+#chmod +x appl
+#./appl

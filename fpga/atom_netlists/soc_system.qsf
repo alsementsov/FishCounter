@@ -1,0 +1,1226 @@
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DIN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DOUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_ADCLRCK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_BCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_DACLRCK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to AUD_XCK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK4_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FAN_CTRL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_I2C_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FPGA_I2C_SDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[31]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_A[35]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[31]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_B[35]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX2[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX3[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX4[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_CONV_USB_N
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ADDR[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_BA[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CAS_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CKE -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_CK_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_CK_P -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_CS_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DM[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[4] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[5] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[6] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[7] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[8] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[9] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[10] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[11] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[12] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[13] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[14] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[15] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[16] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[17] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[18] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[19] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[20] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[21] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[22] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[23] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[24] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[25] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[26] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[27] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[28] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[29] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[30] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_DQ[31] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_N[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[0] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[1] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[2] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.5-V SSTL CLASS I" -to HPS_DDR3_DQS_P[3] -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_ODT -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RAS_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RESET_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_RZQ -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "SSTL-15 CLASS I" -to HPS_DDR3_WE_N -tag __hps_sdram_p0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_GTX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_INT_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_MDC
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_MDIO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_RX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_RX_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_RX_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_RX_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_RX_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_RX_DV
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_TX_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_TX_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_TX_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_TX_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_ENET_TX_EN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_FLASH_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_FLASH_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_FLASH_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_FLASH_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_FLASH_DCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_FLASH_NCSO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_GPIO[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_GPIO[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_GSENSOR_INT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_I2C1_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_I2C1_SDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_I2C2_SCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_I2C2_SDAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_I2C_CONTROL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_KEY
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_LED
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SD_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SD_CMD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SD_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SD_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SD_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SD_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SPIM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SPIM_MISO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SPIM_MOSI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_SPIM_SS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_UART_RX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_UART_TX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_CLKOUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DATA[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_DIR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_NXT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HPS_USB_STP
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IRDA_RXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IRDA_TXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_CLK2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PS2_DAT2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_CLK27
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_DATA[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_RESET_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TD_VS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_BLANK_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_B[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_G[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
+set_location_assignment PIN_AJ4 -to ADC_CS_n
+set_location_assignment PIN_AK4 -to ADC_DIN
+set_location_assignment PIN_AK3 -to ADC_DOUT
+set_location_assignment PIN_AK2 -to ADC_SCLK
+set_location_assignment PIN_K7 -to AUD_ADCDAT
+set_location_assignment PIN_K8 -to AUD_ADCLRCK
+set_location_assignment PIN_H7 -to AUD_BCLK
+set_location_assignment PIN_J7 -to AUD_DACDAT
+set_location_assignment PIN_H8 -to AUD_DACLRCK
+set_location_assignment PIN_G7 -to AUD_XCK
+set_location_assignment PIN_AA16 -to CLOCK2_50
+set_location_assignment PIN_Y26 -to CLOCK3_50
+set_location_assignment PIN_K14 -to CLOCK4_50
+set_location_assignment PIN_AF14 -to CLOCK_50
+set_location_assignment PIN_AD14 -to DRAM_ADDR[0]
+set_location_assignment PIN_AB15 -to DRAM_ADDR[1]
+set_location_assignment PIN_AH15 -to DRAM_ADDR[2]
+set_location_assignment PIN_AH14 -to DRAM_ADDR[3]
+set_location_assignment PIN_AH13 -to DRAM_ADDR[4]
+set_location_assignment PIN_AG13 -to DRAM_ADDR[5]
+set_location_assignment PIN_AF11 -to DRAM_ADDR[6]
+set_location_assignment PIN_AG15 -to DRAM_ADDR[7]
+set_location_assignment PIN_AF13 -to DRAM_ADDR[8]
+set_location_assignment PIN_AF15 -to DRAM_ADDR[9]
+set_location_assignment PIN_AE13 -to DRAM_ADDR[10]
+set_location_assignment PIN_AE14 -to DRAM_ADDR[11]
+set_location_assignment PIN_AC14 -to DRAM_ADDR[12]
+set_location_assignment PIN_AA13 -to DRAM_BA[0]
+set_location_assignment PIN_AB13 -to DRAM_BA[1]
+set_location_assignment PIN_AK13 -to DRAM_CAS_n
+set_location_assignment PIN_AJ14 -to DRAM_CKE
+set_location_assignment PIN_AH12 -to DRAM_CLK
+set_location_assignment PIN_AK14 -to DRAM_CS_N
+set_location_assignment PIN_AK6 -to DRAM_DQ[0]
+set_location_assignment PIN_AK7 -to DRAM_DQ[1]
+set_location_assignment PIN_AK8 -to DRAM_DQ[2]
+set_location_assignment PIN_AH8 -to DRAM_DQ[3]
+set_location_assignment PIN_AK9 -to DRAM_DQ[4]
+set_location_assignment PIN_AJ10 -to DRAM_DQ[5]
+set_location_assignment PIN_AK11 -to DRAM_DQ[6]
+set_location_assignment PIN_AJ11 -to DRAM_DQ[7]
+set_location_assignment PIN_AH10 -to DRAM_DQ[8]
+set_location_assignment PIN_AG10 -to DRAM_DQ[9]
+set_location_assignment PIN_AJ9 -to DRAM_DQ[10]
+set_location_assignment PIN_AH9 -to DRAM_DQ[11]
+set_location_assignment PIN_AJ7 -to DRAM_DQ[12]
+set_location_assignment PIN_AH7 -to DRAM_DQ[13]
+set_location_assignment PIN_AJ6 -to DRAM_DQ[14]
+set_location_assignment PIN_AJ5 -to DRAM_DQ[15]
+set_location_assignment PIN_AG11 -to DRAM_LDQM
+set_location_assignment PIN_AJ12 -to DRAM_RAS_N
+set_location_assignment PIN_AG12 -to DRAM_UDQM
+set_location_assignment PIN_AK12 -to DRAM_WE_N
+set_location_assignment PIN_AA12 -to FAN_CTRL
+set_location_assignment PIN_J12 -to FPGA_I2C_SCLK
+set_location_assignment PIN_K12 -to FPGA_I2C_SDAT
+set_location_assignment PIN_AC18 -to GPIO_A[0]
+set_location_assignment PIN_Y18 -to GPIO_A[1]
+set_location_assignment PIN_AD17 -to GPIO_A[2]
+set_location_assignment PIN_Y17 -to GPIO_A[3]
+set_location_assignment PIN_AA18 -to GPIO_A[4]
+set_location_assignment PIN_AA19 -to GPIO_A[5]
+set_location_assignment PIN_AC20 -to GPIO_A[6]
+set_location_assignment PIN_AD19 -to GPIO_A[7]
+set_location_assignment PIN_AD20 -to GPIO_A[8]
+set_location_assignment PIN_AE16 -to GPIO_A[9]
+set_location_assignment PIN_AE17 -to GPIO_A[10]
+set_location_assignment PIN_AE18 -to GPIO_A[11]
+set_location_assignment PIN_AE19 -to GPIO_A[12]
+set_location_assignment PIN_AF16 -to GPIO_A[13]
+set_location_assignment PIN_AF18 -to GPIO_A[14]
+set_location_assignment PIN_AF19 -to GPIO_A[15]
+set_location_assignment PIN_AF20 -to GPIO_A[16]
+set_location_assignment PIN_AF21 -to GPIO_A[17]
+set_location_assignment PIN_AG16 -to GPIO_A[18]
+set_location_assignment PIN_AG17 -to GPIO_A[19]
+set_location_assignment PIN_AG18 -to GPIO_A[20]
+set_location_assignment PIN_AG20 -to GPIO_A[21]
+set_location_assignment PIN_AG21 -to GPIO_A[22]
+set_location_assignment PIN_AH17 -to GPIO_A[23]
+set_location_assignment PIN_AH19 -to GPIO_A[24]
+set_location_assignment PIN_AH18 -to GPIO_A[25]
+set_location_assignment PIN_AH20 -to GPIO_A[26]
+set_location_assignment PIN_AJ16 -to GPIO_A[27]
+set_location_assignment PIN_AJ17 -to GPIO_A[28]
+set_location_assignment PIN_AJ19 -to GPIO_A[29]
+set_location_assignment PIN_AJ20 -to GPIO_A[30]
+set_location_assignment PIN_AJ21 -to GPIO_A[31]
+set_location_assignment PIN_AK16 -to GPIO_A[32]
+set_location_assignment PIN_AK18 -to GPIO_A[33]
+set_location_assignment PIN_AK19 -to GPIO_A[34]
+set_location_assignment PIN_AK21 -to GPIO_A[35]
+set_location_assignment PIN_AB17 -to GPIO_B[0]
+set_location_assignment PIN_AA20 -to GPIO_B[1]
+set_location_assignment PIN_AA21 -to GPIO_B[2]
+set_location_assignment PIN_AB21 -to GPIO_B[3]
+set_location_assignment PIN_AC22 -to GPIO_B[4]
+set_location_assignment PIN_AC23 -to GPIO_B[5]
+set_location_assignment PIN_AD21 -to GPIO_B[6]
+set_location_assignment PIN_AD24 -to GPIO_B[7]
+set_location_assignment PIN_AE22 -to GPIO_B[8]
+set_location_assignment PIN_AE23 -to GPIO_B[9]
+set_location_assignment PIN_AE24 -to GPIO_B[10]
+set_location_assignment PIN_AF23 -to GPIO_B[11]
+set_location_assignment PIN_AF24 -to GPIO_B[12]
+set_location_assignment PIN_AF25 -to GPIO_B[13]
+set_location_assignment PIN_AF26 -to GPIO_B[14]
+set_location_assignment PIN_AG22 -to GPIO_B[15]
+set_location_assignment PIN_AG23 -to GPIO_B[16]
+set_location_assignment PIN_AG25 -to GPIO_B[17]
+set_location_assignment PIN_AG26 -to GPIO_B[18]
+set_location_assignment PIN_AH22 -to GPIO_B[19]
+set_location_assignment PIN_AH23 -to GPIO_B[20]
+set_location_assignment PIN_AH24 -to GPIO_B[21]
+set_location_assignment PIN_AH25 -to GPIO_B[22]
+set_location_assignment PIN_AH27 -to GPIO_B[23]
+set_location_assignment PIN_AJ22 -to GPIO_B[24]
+set_location_assignment PIN_AJ24 -to GPIO_B[25]
+set_location_assignment PIN_AJ25 -to GPIO_B[26]
+set_location_assignment PIN_AJ26 -to GPIO_B[27]
+set_location_assignment PIN_AJ27 -to GPIO_B[28]
+set_location_assignment PIN_AK22 -to GPIO_B[29]
+set_location_assignment PIN_AK23 -to GPIO_B[30]
+set_location_assignment PIN_AK24 -to GPIO_B[31]
+set_location_assignment PIN_AK26 -to GPIO_B[32]
+set_location_assignment PIN_AK27 -to GPIO_B[33]
+set_location_assignment PIN_AK28 -to GPIO_B[34]
+set_location_assignment PIN_AK29 -to GPIO_B[35]
+set_location_assignment PIN_AJ29 -to HEX0[0]
+set_location_assignment PIN_AH30 -to HEX0[1]
+set_location_assignment PIN_AH29 -to HEX0[2]
+set_location_assignment PIN_AH28 -to HEX0[3]
+set_location_assignment PIN_AG30 -to HEX0[4]
+set_location_assignment PIN_AG28 -to HEX0[5]
+set_location_assignment PIN_AG27 -to HEX0[6]
+set_location_assignment PIN_AF30 -to HEX1[0]
+set_location_assignment PIN_AF29 -to HEX1[1]
+set_location_assignment PIN_AF28 -to HEX1[2]
+set_location_assignment PIN_AE28 -to HEX1[3]
+set_location_assignment PIN_AE27 -to HEX1[4]
+set_location_assignment PIN_AE26 -to HEX1[5]
+set_location_assignment PIN_AD27 -to HEX1[6]
+set_location_assignment PIN_AD26 -to HEX2[0]
+set_location_assignment PIN_AC27 -to HEX2[1]
+set_location_assignment PIN_AD25 -to HEX2[2]
+set_location_assignment PIN_AC25 -to HEX2[3]
+set_location_assignment PIN_AB26 -to HEX2[4]
+set_location_assignment PIN_AB25 -to HEX2[5]
+set_location_assignment PIN_AB23 -to HEX2[6]
+set_location_assignment PIN_AA24 -to HEX3[0]
+set_location_assignment PIN_AB22 -to HEX3[1]
+set_location_assignment PIN_AA25 -to HEX3[2]
+set_location_assignment PIN_Y24 -to HEX3[3]
+set_location_assignment PIN_Y23 -to HEX3[4]
+set_location_assignment PIN_W24 -to HEX3[5]
+set_location_assignment PIN_W22 -to HEX3[6]
+set_location_assignment PIN_V23 -to HEX4[0]
+set_location_assignment PIN_AE29 -to HEX4[1]
+set_location_assignment PIN_AD30 -to HEX4[2]
+set_location_assignment PIN_AD29 -to HEX4[3]
+set_location_assignment PIN_AC29 -to HEX4[4]
+set_location_assignment PIN_AC28 -to HEX4[5]
+set_location_assignment PIN_AC30 -to HEX4[6]
+set_location_assignment PIN_AB27 -to HEX5[0]
+set_location_assignment PIN_Y27 -to HEX5[1]
+set_location_assignment PIN_AA26 -to HEX5[2]
+set_location_assignment PIN_AB28 -to HEX5[3]
+set_location_assignment PIN_AA28 -to HEX5[4]
+set_location_assignment PIN_W25 -to HEX5[5]
+set_location_assignment PIN_V25 -to HEX5[6]
+set_location_assignment PIN_AA30 -to IRDA_RXD
+set_location_assignment PIN_AB30 -to IRDA_TXD
+set_location_assignment PIN_AA14 -to KEY[0]
+set_location_assignment PIN_AA15 -to KEY[1]
+set_location_assignment PIN_W15 -to KEY[2]
+set_location_assignment PIN_Y16 -to KEY[3]
+set_location_assignment PIN_V16 -to LEDR[0]
+set_location_assignment PIN_W16 -to LEDR[1]
+set_location_assignment PIN_V17 -to LEDR[2]
+set_location_assignment PIN_V18 -to LEDR[3]
+set_location_assignment PIN_W17 -to LEDR[4]
+set_location_assignment PIN_W19 -to LEDR[5]
+set_location_assignment PIN_Y19 -to LEDR[6]
+set_location_assignment PIN_W20 -to LEDR[7]
+set_location_assignment PIN_W21 -to LEDR[8]
+set_location_assignment PIN_Y21 -to LEDR[9]
+set_location_assignment PIN_AD7 -to PS2_CLK
+set_location_assignment PIN_AD9 -to PS2_CLK2
+set_location_assignment PIN_AE7 -to PS2_DAT
+set_location_assignment PIN_AE9 -to PS2_DAT2
+set_location_assignment PIN_AB12 -to SW[0]
+set_location_assignment PIN_AC12 -to SW[1]
+set_location_assignment PIN_AF9 -to SW[2]
+set_location_assignment PIN_AF10 -to SW[3]
+set_location_assignment PIN_AD11 -to SW[4]
+set_location_assignment PIN_AD12 -to SW[5]
+set_location_assignment PIN_AE11 -to SW[6]
+set_location_assignment PIN_AC9 -to SW[7]
+set_location_assignment PIN_AD10 -to SW[8]
+set_location_assignment PIN_AE12 -to SW[9]
+set_location_assignment PIN_H15 -to TD_CLK27
+set_location_assignment PIN_D2 -to TD_DATA[0]
+set_location_assignment PIN_B1 -to TD_DATA[1]
+set_location_assignment PIN_E2 -to TD_DATA[2]
+set_location_assignment PIN_B2 -to TD_DATA[3]
+set_location_assignment PIN_D1 -to TD_DATA[4]
+set_location_assignment PIN_E1 -to TD_DATA[5]
+set_location_assignment PIN_C2 -to TD_DATA[6]
+set_location_assignment PIN_B3 -to TD_DATA[7]
+set_location_assignment PIN_A5 -to TD_HS
+set_location_assignment PIN_F6 -to TD_RESET_N
+set_location_assignment PIN_A3 -to TD_VS
+set_location_assignment PIN_F10 -to VGA_BLANK_N
+set_location_assignment PIN_G13 -to VGA_B[0]
+set_location_assignment PIN_H13 -to VGA_B[1]
+set_location_assignment PIN_J14 -to VGA_B[2]
+set_location_assignment PIN_H14 -to VGA_B[3]
+set_location_assignment PIN_G10 -to VGA_B[4]
+set_location_assignment PIN_G15 -to VGA_B[5]
+set_location_assignment PIN_F14 -to VGA_B[6]
+set_location_assignment PIN_F15 -to VGA_B[7]
+set_location_assignment PIN_A11 -to VGA_CLK
+set_location_assignment PIN_J9 -to VGA_G[0]
+set_location_assignment PIN_J10 -to VGA_G[1]
+set_location_assignment PIN_G11 -to VGA_G[2]
+set_location_assignment PIN_F11 -to VGA_G[3]
+set_location_assignment PIN_E11 -to VGA_G[4]
+set_location_assignment PIN_H12 -to VGA_G[5]
+set_location_assignment PIN_G12 -to VGA_G[6]
+set_location_assignment PIN_F13 -to VGA_G[7]
+set_location_assignment PIN_B11 -to VGA_HS
+set_location_assignment PIN_E12 -to VGA_R[0]
+set_location_assignment PIN_E13 -to VGA_R[1]
+set_location_assignment PIN_D12 -to VGA_R[2]
+set_location_assignment PIN_C12 -to VGA_R[3]
+set_location_assignment PIN_B12 -to VGA_R[4]
+set_location_assignment PIN_C13 -to VGA_R[5]
+set_location_assignment PIN_B13 -to VGA_R[6]
+set_location_assignment PIN_A13 -to VGA_R[7]
+set_location_assignment PIN_C10 -to VGA_SYNC_N
+set_location_assignment PIN_D11 -to VGA_VS
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[0] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[1] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[2] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[3] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[4] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[4] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[5] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[5] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[6] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[6] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[7] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[7] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[8] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[8] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[9] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[9] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[10] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[10] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[11] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[11] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[12] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[12] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[13] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[13] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[14] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[14] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[15] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[15] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[16] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[16] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[17] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[17] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[18] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[18] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[19] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[19] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[20] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[20] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[21] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[21] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[22] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[22] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[23] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[23] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[24] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[24] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[25] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[25] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[26] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[26] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[27] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[27] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[28] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[28] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[29] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[29] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[30] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[30] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[31] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQ[31] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[0] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[1] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[2] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_P[3] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[0] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[1] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[2] -tag __hps_sdram_p0
+set_instance_assignment -name INPUT_TERMINATION "PARALLEL 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DQS_N[3] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to HPS_DDR3_CK_P -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITHOUT CALIBRATION" -to HPS_DDR3_CK_N -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[0] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[10] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[11] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[12] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[13] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[14] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[1] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[2] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[3] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[4] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[5] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[6] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[7] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[8] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ADDR[9] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_BA[0] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_BA[1] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_BA[2] -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_CAS_N -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_CKE -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_CS_N -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_ODT -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_RAS_N -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_WE_N -tag __hps_sdram_p0
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to HPS_DDR3_RESET_N -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DM[0] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DM[1] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DM[2] -tag __hps_sdram_p0
+set_instance_assignment -name OUTPUT_TERMINATION "SERIES 50 OHM WITH CALIBRATION" -to HPS_DDR3_DM[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[4] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[5] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[6] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[7] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[8] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[9] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[10] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[11] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[12] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[13] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[14] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[15] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[16] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[17] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[18] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[19] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[20] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[21] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[22] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[23] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[24] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[25] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[26] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[27] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[28] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[29] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[30] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQ[31] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DM[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DM[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DM[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DM[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_P[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_P[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_P[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_P[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_N[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_N[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_N[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_DQS_N[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[10] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[11] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[12] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[13] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[14] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[3] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[4] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[5] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[6] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[7] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[8] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ADDR[9] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_BA[0] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_BA[1] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_BA[2] -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CAS_N -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CKE -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CS_N -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_ODT -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_RAS_N -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_WE_N -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_RESET_N -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_P -tag __hps_sdram_p0
+set_instance_assignment -name PACKAGE_SKEW_COMPENSATION OFF -to HPS_DDR3_CK_N -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|ureset|phy_reset_mem_stable_n -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|ureset|phy_reset_n -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[0].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[0] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[1].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[1] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[2].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[2] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uio_pads|dq_ddio[3].read_capture_clk_buffer -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_write_side[3] -tag __hps_sdram_p0
+set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_sdram_inst|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[3] -tag __hps_sdram_p0
+set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|hps_0|hps_io|border|hps_sdram_inst -tag __hps_sdram_p0
+set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|hps_0|hps_io|border|hps_sdram_inst|pll0|fbout -tag __hps_sdram_p0
+set_hps_location_assignment PIN_P19A0T -to hps_io|border|hps_io_emac1_inst_TX_CLK[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P19B0T -to hps_io|border|hps_io_emac1_inst_TXD0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P19A1T -to hps_io|border|hps_io_emac1_inst_TXD1[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P19B1T -to hps_io|border|hps_io_emac1_inst_TXD2[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P20A0T -to hps_io|border|hps_io_emac1_inst_TXD3[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P20B0T -to hps_io|border|hps_io_emac1_inst_RXD0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P20A1T -to hps_io|border|hps_io_emac1_inst_MDIO[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P20B1T -to hps_io|border|hps_io_emac1_inst_MDC[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P21A0T -to hps_io|border|hps_io_emac1_inst_RX_CTL[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P21B0T -to hps_io|border|hps_io_emac1_inst_TX_CTL[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P21A1T -to hps_io|border|hps_io_emac1_inst_RX_CLK[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P21B1T -to hps_io|border|hps_io_emac1_inst_RXD1[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P22A0T -to hps_io|border|hps_io_emac1_inst_RXD2[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P22B0T -to hps_io|border|hps_io_emac1_inst_RXD3[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P22B1T -to hps_io|border|hps_io_qspi_inst_IO0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P23A0T -to hps_io|border|hps_io_qspi_inst_IO1[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P23B0T -to hps_io|border|hps_io_qspi_inst_IO2[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P23A1T -to hps_io|border|hps_io_qspi_inst_IO3[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P23B1T -to hps_io|border|hps_io_qspi_inst_SS0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P24A0T -to hps_io|border|hps_io_qspi_inst_CLK[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P25A0T -to hps_io|border|hps_io_sdio_inst_CMD[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P25A1T -to hps_io|border|hps_io_sdio_inst_D0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P25B1T -to hps_io|border|hps_io_sdio_inst_D1[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P27B0T -to hps_io|border|hps_io_sdio_inst_CLK[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P27A1T -to hps_io|border|hps_io_sdio_inst_D2[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P27B1T -to hps_io|border|hps_io_sdio_inst_D3[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P28B0T -to hps_io|border|hps_io_usb1_inst_D0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P28A1T -to hps_io|border|hps_io_usb1_inst_D1[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P28B1T -to hps_io|border|hps_io_usb1_inst_D2[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P29A0T -to hps_io|border|hps_io_usb1_inst_D3[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P29B0T -to hps_io|border|hps_io_usb1_inst_D4[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P29A1T -to hps_io|border|hps_io_usb1_inst_D5[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P29B1T -to hps_io|border|hps_io_usb1_inst_D6[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P30A0T -to hps_io|border|hps_io_usb1_inst_D7[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P30A1T -to hps_io|border|hps_io_usb1_inst_CLK[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P30B1T -to hps_io|border|hps_io_usb1_inst_STP[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P31A0T -to hps_io|border|hps_io_usb1_inst_DIR[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P31B0T -to hps_io|border|hps_io_usb1_inst_NXT[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P17B1T -to hps_io|border|hps_io_spim1_inst_CLK[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P18A0T -to hps_io|border|hps_io_spim1_inst_MOSI[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P18B0T -to hps_io|border|hps_io_spim1_inst_MISO[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P18A1T -to hps_io|border|hps_io_spim1_inst_SS0[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P14B0T -to hps_io|border|hps_io_uart0_inst_RX[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P14A1T -to hps_io|border|hps_io_uart0_inst_TX[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P15B1T -to hps_io|border|hps_io_i2c0_inst_SDA[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P16A0T -to hps_io|border|hps_io_i2c0_inst_SCL[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P14B1T -to hps_io|border|hps_io_i2c1_inst_SDA[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P15A0T -to hps_io|border|hps_io_i2c1_inst_SCL[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P30B0T -to hps_io|border|hps_io_gpio_inst_GPIO09[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P24B0T -to hps_io|border|hps_io_gpio_inst_GPIO35[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P26A0T -to hps_io|border|hps_io_gpio_inst_GPIO40[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P26B0T -to hps_io|border|hps_io_gpio_inst_GPIO41[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P14A0T -to hps_io|border|hps_io_gpio_inst_GPIO48[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P15B0T -to hps_io|border|hps_io_gpio_inst_GPIO53[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P15A1T -to hps_io|border|hps_io_gpio_inst_GPIO54[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment PIN_P17B0T -to hps_io|border|hps_io_gpio_inst_GPIO61[0] -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALEMAC_X77_Y39_N111 -to emac1_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALQSPI_X87_Y58_N111 -to qspi_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALSDMMC_X87_Y39_N111 -to sdio_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALUSB_X55_Y39_N111 -to usb1_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALSPIMASTER_X87_Y53_N111 -to spim1_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALUART_X87_Y45_N111 -to uart0_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALI2C_X87_Y67_N111 -to i2c0_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALI2C_X87_Y65_N111 -to i2c1_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSPERIPHERALGPIO_X87_Y74_N111 -to gpio_inst -entity soc_system_hps_0_hps_io_border -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACECLOCKSRESETS_X52_Y78_N111 -to clocks_resets -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEDBGAPB_X52_Y80_N111 -to debug_apb -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACESTMEVENT_X52_Y42_N111 -to stm_event -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACETPIUTRACE_X52_Y39_N111 -to tpiu -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEBOOTFROMFPGA_X52_Y74_N111 -to boot_from_fpga -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEFPGA2HPS_X52_Y45_N111 -to fpga2hps -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEHPS2FPGALIGHTWEIGHT_X52_Y43_N111 -to hps2fpga_light_weight -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEHPS2FPGA_X52_Y47_N111 -to hps2fpga -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEFPGA2SDRAM_X52_Y53_N111 -to f2sdram -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_hps_location_assignment HPSINTERFACEINTERRUPTS_X52_Y40_N111 -to interrupts -entity soc_system_hps_0_fpga_interfaces -qip soc_system/synthesis/soc_system.qip
+set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_P -tag __hps_sdram_p0
+set_instance_assignment -name D5_DELAY 2 -to HPS_DDR3_CK_N -tag __hps_sdram_p0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY ghrd_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "MON JUN 17 20:35:29 2013"
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name UNIPHY_SEQUENCER_DQS_CONFIG_ENABLE ON
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON
+set_global_assignment -name ECO_REGENERATE_REPORT ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name QIP_FILE ip/altsource_probe/hps_reset.qip
+set_global_assignment -name IP_TOOL_NAME "In-System Sources and Probes" -qip ip/altsource_probe/hps_reset.qip
+set_global_assignment -name IP_TOOL_VERSION 13.1 -qip ip/altsource_probe/hps_reset.qip
+set_global_assignment -name VERILOG_FILE ip/altsource_probe/hps_reset.v -qip ip/altsource_probe/hps_reset.qip
+set_global_assignment -name MISC_FILE ip/altsource_probe/hps_reset_bb.v -qip ip/altsource_probe/hps_reset.qip
+set_global_assignment -name VERILOG_FILE ip/altsource_probe/hps_reset.v
+set_global_assignment -name VERILOG_FILE ip/debounce/debounce.v
+set_global_assignment -name VERILOG_FILE ip/edge_detect/altera_edge_detector.v
+set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
+set_global_assignment -name IP_TOOL_NAME Qsys -entity soc_system -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SOPCINFO_FILE soc_system/synthesis/../../soc_system.sopcinfo -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SLD_INFO "QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1389960742" -entity soc_system -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/../../soc_system.cmp -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SLD_FILE soc_system/synthesis/soc_system.regmap -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/../../H -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/soc_system_hps_0_hps.svd -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SLD_FILE soc_system/synthesis/soc_system.debuginfo -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON -qip soc_system/synthesis/soc_system.qip
+set_global_assignment -name MISC_FILE soc_system/synthesis/../../soc_system.qsys -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/soc_system.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_reset_controller.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_reset_synchronizer.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SDC_FILE soc_system/synthesis/submodules/altera_reset_controller.sdc -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_irq_mapper_001.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_irq_mapper.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_width_adapter.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_address_alignment.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_arbitrator.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_xbar_mux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1_rsp_xbar_demux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_xbar_mux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1_cmd_xbar_demux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_avalon_sc_fifo.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1_id_router.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_1_addr_router.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_axi_slave_ni.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/credit_producer.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_master_agent.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_master_translator.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_mux_003.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_mux_002.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_mux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_demux_004.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_demux_002.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_demux_001.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_rsp_xbar_demux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_mux_004.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_mux_002.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_mux_001.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_mux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_demux_003.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_demux_002.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_cmd_xbar_demux.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_burst_adapter.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_id_router_004.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_id_router_002.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_id_router_001.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_id_router.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_addr_router_003.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_addr_router_002.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_mm_interconnect_0_addr_router.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_slave_agent.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_axi_master_ni.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_merlin_slave_translator.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_pio_led.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/intr_capturer.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_jtag_uart.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_sysid_qsys.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_only_master.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_only_master_p2b_adapter.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_only_master_b2p_adapter.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_packets_to_master.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_packets_to_bytes.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_bytes_to_packets.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_only_master_timing_adt.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_jtag_dc_streaming.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_jtag_sld_node.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_jtag_streaming.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_pli_streaming.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_idle_remover.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_avalon_st_idle_inserter.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SDC_FILE soc_system/synthesis/submodules/altera_avalon_st_jtag_interface.sdc -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SOURCE_FILE soc_system/synthesis/submodules/soc_system_onchip_memory2_0.hex -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_onchip_memory2_0.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_0.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_0_hps_io.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altdq_dqs2_acv_connect_to_hard_phy_cyclonev.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_mem_if_hard_memory_controller_top_cyclonev.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SOURCE_FILE soc_system/synthesis/submodules/hps_sdram_p0.ppf -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SDC_FILE soc_system/synthesis/submodules/hps_sdram_p0.sdc -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_acv_ldc.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_altdqdqs.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_generic_ddio.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_iss_probe.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name TCL_SCRIPT_FILE soc_system/synthesis/submodules/hps_sdram_p0_parameters.tcl -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_phy_csr.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name TCL_SCRIPT_FILE soc_system/synthesis/submodules/hps_sdram_p0_pin_assignments.tcl -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name TCL_SCRIPT_FILE soc_system/synthesis/submodules/hps_sdram_p0_pin_map.tcl -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name TCL_SCRIPT_FILE soc_system/synthesis/submodules/hps_sdram_p0_report_timing.tcl -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name TCL_SCRIPT_FILE soc_system/synthesis/submodules/hps_sdram_p0_report_timing_core.tcl -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_reset.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name VERILOG_FILE soc_system/synthesis/submodules/hps_sdram_p0_reset_sync.v -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name TCL_SCRIPT_FILE soc_system/synthesis/submodules/hps_sdram_p0_timing.tcl -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/hps_sdram_pll.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/alt_types.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/emif.pre.xml -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sdram_io.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sequencer.pre.c -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sequencer.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/system.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/tclrpt.pre.c -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/sequencer/tclrpt.pre.h -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_0_hps_io_border.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name MISC_FILE soc_system/synthesis/submodules/hps.pre.xml -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SYSTEMVERILOG_FILE soc_system/synthesis/submodules/soc_system_hps_0_fpga_interfaces.sv -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_reset_controller -entity altera_reset_controller -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_reset_controller -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_reset_controller -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_irq_mapper -entity soc_system_irq_mapper_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_irq_mapper_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_irq_mapper_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_irq_mapper -entity soc_system_irq_mapper -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_irq_mapper -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_irq_mapper -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_interconnect_wrapper -entity soc_system_mm_interconnect_1 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_width_adapter -entity altera_merlin_width_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_width_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_width_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_1_rsp_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1_rsp_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1_rsp_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_1_rsp_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1_rsp_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1_rsp_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_1_cmd_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1_cmd_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1_cmd_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_1_cmd_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1_cmd_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1_cmd_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_traffic_limiter -entity altera_merlin_traffic_limiter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_traffic_limiter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_traffic_limiter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_1_id_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1_id_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1_id_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_1_addr_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_1_addr_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_1_addr_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_axi_slave_ni -entity altera_merlin_axi_slave_ni -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_axi_slave_ni -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_axi_slave_ni -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_master_agent -entity altera_merlin_master_agent -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_master_agent -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_master_agent -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_master_translator -entity altera_merlin_master_translator -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_master_translator -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_master_translator -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_interconnect_wrapper -entity soc_system_mm_interconnect_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_mux_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_mux_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_mux_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_mux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_mux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_mux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_demux_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_demux_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_demux_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_demux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_demux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_demux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_demux_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_demux_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_demux_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_rsp_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_rsp_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_rsp_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_mux_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_mux_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_mux_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_mux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_mux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_mux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_mux_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_mux_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_mux_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_multiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_mux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_demux_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_demux_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_demux_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_demux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_demux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_demux_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_demultiplexer -entity soc_system_mm_interconnect_0_cmd_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_cmd_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_cmd_xbar_demux -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_burst_adapter -entity altera_merlin_burst_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_burst_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_burst_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_id_router_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_id_router_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_id_router_004 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_id_router_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_id_router_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_id_router_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_id_router_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_id_router_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_id_router_001 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_id_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_id_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_id_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_addr_router_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_addr_router_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_addr_router_003 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_addr_router_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_addr_router_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_addr_router_002 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_router -entity soc_system_mm_interconnect_0_addr_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_mm_interconnect_0_addr_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_mm_interconnect_0_addr_router -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_sc_fifo -entity altera_avalon_sc_fifo -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_avalon_sc_fifo -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_avalon_sc_fifo -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_slave_agent -entity altera_merlin_slave_agent -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_slave_agent -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_slave_agent -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_axi_master_ni -entity altera_merlin_axi_master_ni -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_axi_master_ni -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_axi_master_ni -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_merlin_slave_translator -entity altera_merlin_slave_translator -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_merlin_slave_translator -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_merlin_slave_translator -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_pio -entity soc_system_pio_led -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_pio_led -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_pio_led -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME intr_capturer -entity intr_capturer -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 100.99.98.97 -entity intr_capturer -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity intr_capturer -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_jtag_uart -entity soc_system_jtag_uart -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_jtag_uart -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_jtag_uart -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_sysid_qsys -entity soc_system_sysid_qsys -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_sysid_qsys -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_sysid_qsys -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_jtag_avalon_master -entity soc_system_hps_only_master -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_hps_only_master -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_hps_only_master -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME channel_adapter -entity soc_system_hps_only_master_p2b_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_hps_only_master_p2b_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_hps_only_master_p2b_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME channel_adapter -entity soc_system_hps_only_master_b2p_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_hps_only_master_b2p_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_hps_only_master_b2p_adapter -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_packets_to_master -entity altera_avalon_packets_to_master -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_avalon_packets_to_master -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_avalon_packets_to_master -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_st_packets_to_bytes -entity altera_avalon_st_packets_to_bytes -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_avalon_st_packets_to_bytes -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_avalon_st_packets_to_bytes -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_st_bytes_to_packets -entity altera_avalon_st_bytes_to_packets -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_avalon_st_bytes_to_packets -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_avalon_st_bytes_to_packets -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME timing_adapter -entity soc_system_hps_only_master_timing_adt -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_hps_only_master_timing_adt -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_hps_only_master_timing_adt -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_jtag_dc_streaming -entity altera_avalon_st_jtag_interface -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity altera_avalon_st_jtag_interface -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity altera_avalon_st_jtag_interface -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_avalon_onchip_memory2 -entity soc_system_onchip_memory2_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_onchip_memory2_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_onchip_memory2_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_hps -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_hps_0 -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_NAME altera_hps_io -entity soc_system_hps_0_hps_io -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_VERSION 13.1 -entity soc_system_hps_0_hps_io -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name IP_TOOL_ENV Qsys -entity soc_system_hps_0_hps_io -qip soc_system/synthesis/soc_system.qip -library soc_system
+set_global_assignment -name SDC_FILE soc_system_timing.sdc
+set_global_assignment -name VERILOG_FILE ghrd_top.v
+set_global_assignment -name USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ON
+set_global_assignment -name BDF_FILE my_shem.bdf
+set_global_assignment -name QIP_FILE cnt.qip
+set_global_assignment -name IP_TOOL_NAME LPM_COUNTER -qip cnt.qip
+set_global_assignment -name IP_TOOL_VERSION 13.1 -qip cnt.qip
+set_global_assignment -name VERILOG_FILE cnt.v -qip cnt.qip
+set_global_assignment -name MISC_FILE cnt.bsf -qip cnt.qip
+set_global_assignment -name MISC_FILE cnt_bb.v -qip cnt.qip
+set_global_assignment -name SEARCH_PATH /
+set_global_assignment -name VERILOG_FILE DE1_HPS.v

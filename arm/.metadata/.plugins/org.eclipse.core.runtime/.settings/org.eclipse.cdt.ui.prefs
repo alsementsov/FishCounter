@@ -1,0 +1,35 @@
+#Wed Dec 24 15:30:04 MSK 2014
+nameStyle.constant.suffix=
+sourceHoverBackgroundColor=255,255,225
+nameStyle.getter.suffix=
+spelling_locale_initialized=true
+org.eclipse.cdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+nameStyle.cpp.test.wordDelimiter=
+buildConsoleProblemInfoBackgroundColor=255,243,212
+nameStyle.setter.prefix=set
+nameStyle.variable.prefix=
+nameStyle.field.suffix=
+nameStyle.cpp.source.wordDelimiter=
+nameStyle.getter.prefixForBoolean=is
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+nameStyle.variable.wordDelimiter=
+nameStyle.getter.wordDelimiter=
+nameStyle.cpp.test.suffix=_test.cpp
+nameStyle.cpp.header.prefix=
+nameStyle.constant.wordDelimiter=_
+nameStyle.cpp.source.prefix=
+nameStyle.field.wordDelimiter=
+spelling_user_dictionary_encoding=
+nameStyle.variable.suffix=
+nameStyle.setter.suffix=
+nameStyle.getter.prefix=get
+nameStyle.constant.prefix=
+nameStyle.setter.wordDelimiter=
+buildConsoleBackgroundColor=255,243,212
+nameStyle.cpp.header.wordDelimiter=
+nameStyle.cpp.header.suffix=.h
+useQuickDiffPrefPage=true
+nameStyle.field.prefix=
+nameStyle.cpp.source.suffix=.cpp
+nameStyle.cpp.test.prefix=

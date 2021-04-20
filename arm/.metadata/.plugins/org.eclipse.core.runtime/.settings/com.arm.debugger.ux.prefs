@@ -1,0 +1,6 @@
+#Fri Jan 29 13:43:05 GMT+03:00 2016
+eclipse.preferences.version=1
+com.arm.debugger.ux.scripts.favorites.new=script.file.tag\=C\:\\altera\\13.1\\embedded\\ds-5\\sw\\debugger\\configdb\\Scripts\\altera_target_check.py\nscript.verbose.tag\=false\n
+UXContextManager.savedContexts=<contexts>\r\n <context color\="32896">Connection|86v1031kl\:1sdlpk9mueb46|1454063966084|workspace\:\:Linux|Linux</context>\r\n <view viewId\="Disassembly" contextId\="86v1031kl\:1sdlpk9mueb46"></view>\r\n</contexts>\r\n
+PreferredTargetHasBeenSet=true
+ConnectionManager.savedConnections=<connections>\r\n <connection current\="yes" mode\="debug" type\="com.arm.debugger.launcher2">Linux</connection>\r\n</connections>\r\n

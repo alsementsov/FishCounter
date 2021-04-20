@@ -1,0 +1,6 @@
+#Fri Sep 12 11:12:32 MSK 2014
+AbstractTextEditor.Color.Background=255,243,212
+eclipse.preferences.version=1
+spellingEngine=org.eclipse.cdt.internal.ui.text.spelling.CSpellingEngine
+AbstractTextEditor.Color.Background.SystemDefault=false
+overviewRuler_migration=migrated_3.1

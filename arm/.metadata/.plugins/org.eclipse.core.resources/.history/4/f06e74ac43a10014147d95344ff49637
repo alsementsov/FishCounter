@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Run application"
+echo "Run application" > me2.txt
+#chmod +x appl
+#./appl

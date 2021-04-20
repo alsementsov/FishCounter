@@ -1,0 +1,3 @@
+#!/bin/sh -e
+./run_appl
+exit 0

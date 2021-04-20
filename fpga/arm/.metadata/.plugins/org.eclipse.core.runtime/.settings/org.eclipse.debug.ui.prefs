@@ -1,0 +1,6 @@
+#Fri Sep 12 11:23:43 MSK 2014
+org.eclipse.debug.ui.consoleBackground=255,243,212
+eclipse.preferences.version=1
+Console.highWaterMark=88000
+preferredTargets=org.eclipse.cdt.debug.ui.toggleCBreakpointTarget,com.arm.debugger.ux.toggleARMBreakpointTarget\:com.arm.debugger.ux.toggleARMBreakpointTarget|org.eclipse.cdt.debug.ui.toggleCBreakpointTarget\:org.eclipse.cdt.debug.ui.toggleCBreakpointTarget|com.arm.debugger.ux.toggleARMBreakpointTarget\:com.arm.debugger.ux.toggleARMBreakpointTarget|default,com.arm.debugger.ux.toggleARMBreakpointTarget\:com.arm.debugger.ux.toggleARMBreakpointTarget|
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n

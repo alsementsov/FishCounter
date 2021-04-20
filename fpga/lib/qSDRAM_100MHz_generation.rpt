@@ -1,0 +1,39 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=D:/Chirik/DE1_SoC/Project/1_my_lib/ --output-directory=D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz/ --report-file=bsf:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz.bsf --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz.qsys
+Progress: Loading 1_my_lib/qSDRAM_100MHz.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=D:/Chirik/DE1_SoC/Project/1_my_lib/ --output-directory=D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz.html --report-file=sopcinfo:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz.sopcinfo --report-file=cmp:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz.cmp --report-file=qip:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz/synthesis/qSDRAM_100MHz.qip --report-file=svd --report-file=regmap:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz/synthesis/qSDRAM_100MHz.regmap --report-file=debuginfo:D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz/synthesis/qSDRAM_100MHz.debuginfo --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSEMA5F31C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=D:/Chirik/DE1_SoC/Project/1_my_lib/qSDRAM_100MHz.qsys --language=VERILOG
+Progress: Loading 1_my_lib/qSDRAM_100MHz.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 13.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qSDRAM_100MHz: Generating qSDRAM_100MHz "qSDRAM_100MHz" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 2 connections
+Info: No custom instruction connections, skipping transform 
+Info: reset_adaptation_transform: After transform: 3 modules, 4 connections
+Info: new_sdram_controller_0: Starting RTL generation for module 'qSDRAM_100MHz_new_sdram_controller_0'
+Info: new_sdram_controller_0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=qSDRAM_100MHz_new_sdram_controller_0 --dir=C:/Users/chirik/AppData/Local/Temp/alt6163_1837700578307190122.dir/0001_new_sdram_controller_0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/chirik/AppData/Local/Temp/alt6163_1837700578307190122.dir/0001_new_sdram_controller_0_gen//qSDRAM_100MHz_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0: Done RTL generation for module 'qSDRAM_100MHz_new_sdram_controller_0'
+Info: new_sdram_controller_0: "qSDRAM_100MHz" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: rst_controller: "qSDRAM_100MHz" instantiated altera_reset_controller "rst_controller"
+Info: qSDRAM_100MHz: Done "qSDRAM_100MHz" with 3 modules, 6 files, 58064 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

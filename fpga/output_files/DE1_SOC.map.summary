@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Oct 23 13:44:18 2015
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : DE1_SOC
+Top-level Entity Name : DE1_SOC_SHEM
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 15118
+Total pins : 281
+Total virtual pins : 0
+Total block memory bits : 1,990,651
+Total DSP Blocks : 21
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI TX Channels : 0
+Total PLLs : 3
+Total DLLs : 1
